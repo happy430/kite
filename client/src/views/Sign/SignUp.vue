@@ -2,7 +2,7 @@
   <section class="sign-lay layout-content">
     <div class="sign-view">
       <div class="title">
-        注册
+        CREATE ACCOUNT
       </div>
       <div class="js-sign-in-container">
         <form id="sign-up"
@@ -14,7 +14,7 @@
             <input v-model="formData.nickname"
                    type="text"
                    class="nickname"
-                   placeholder="你的昵称">
+                   placeholder="nickname">
             <i class="el-icon-user-solid"></i>
           </div>
 
@@ -22,7 +22,7 @@
             <input v-model="formData.email"
                    type="text"
                    class="send-email-input account"
-                   placeholder="邮箱">
+                   placeholder="Email">
             <i class="el-icon-message"></i>
             <send-code v-model="isSendCode"
                        @click.native="sendCode"
@@ -36,7 +36,7 @@
             <input v-model="formData.code"
                    type="text"
                    class="send-email-code code"
-                   placeholder="请输入验证码">
+                   placeholder="Security code">
             <i class="el-icon-chat-round"></i>
           </div>
 
@@ -44,7 +44,7 @@
             <input v-model="formData.password"
                    type="password"
                    class="password"
-                   placeholder="密码">
+                   placeholder="Password">
             <i class="el-icon-key"></i>
           </div>
 
@@ -52,15 +52,15 @@
             <input v-model="formData.double_password"
                    type="password"
                    class="double_password"
-                   placeholder="重复密码">
+                   placeholder="Confirm password">
             <i class="el-icon-key"></i>
           </div>
 
-          <div class="footer-text">已有账户， <em @click="tapSign">登录</em></div>
+          <div class="footer-text" style="font-size:12px">ALREADY HAVE ACCOUNT? <em @click="tapSign">SIGN IN</em></div>
 
           <button class="sign-up-button"
                   type="button"
-                  @click="register">注册</button>
+                  @click="register">CREATE ACCOUNT</button>
         </form>
 
       </div>

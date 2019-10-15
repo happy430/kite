@@ -11,7 +11,7 @@
     </div>
 
     <div class="aside-component client-card">
-      <h3 class="title">写下你想说的</h3>
+      <h3 class="title">写下你想说的123</h3>
       <div class="issue-btn">
         <router-link class="btn-dynamic js-publish-btn"
                      :to="{name:'dynamics',params:{dynamicTopicId:'newest'}}">

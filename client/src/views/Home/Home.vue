@@ -1,10 +1,11 @@
 <template>
-  <div class="home-lay index-box-container"
+  <div class="tp-bgimg"></div>
+  <!--<div class="home-lay index-box-container"
        id="index">
     <div class="index-container">
       <div class="row">
         <div class="home-col-left col-xs-12 col-sm-8 col-md-8">
-          <!--home-lay layout-content start-->
+          &lt;!&ndash;home-lay layout-content start&ndash;&gt;
           <section class="layout-content">
             <NavHeader :navItem="articleColumn.homeColumn" />
 
@@ -24,16 +25,16 @@
               </scroll-loading>
             </div>
           </section>
-          <!--home-lay layout-content end-->
+          &lt;!&ndash;home-lay layout-content end&ndash;&gt;
         </div>
         <div class="home-col-right col-xs-12 col-sm-4 col-md-4">
-          <!--aside.html start-->
+          &lt;!&ndash;aside.html start&ndash;&gt;
           <HomeAside />
-          <!--aside.html end-->
+          &lt;!&ndash;aside.html end&ndash;&gt;
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 </template>
 
 <script>
@@ -146,6 +147,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  .tp-bgimg{
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-image: url("https://cdn.goodq.top/caches/ee6cebfcbdcceb785c544efcfc4a344e/aHR0cHM6Ly93d3cuZ3JpdGdlbmUuZGUvcWZ5LWNvbnRlbnQvdXBsb2Fkcy8yMDE5LzA5LzQ4MGQ0ZjJlN2JlMTg2MWY0YjRjZjIyMTRlMWJkNzk2LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg");
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    height: 800px;
+    overflow:auto;
+  }
 .home-lay {
   .home-col-left {
     padding-right: 38px;

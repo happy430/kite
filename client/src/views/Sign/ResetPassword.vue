@@ -3,13 +3,13 @@
            id="reset-password">
     <div class="sign-view">
       <div class="title">
-        重置密码
+        RESET PASSWORD
       </div>
       <div class="js-sign-in-container">
         <form>
 
           <div class="input-prepend email-view">
-            <input placeholder="邮箱"
+            <input placeholder="Email"
                    type="text"
                    class="send-email-input account"
                    v-model="formData.email">
@@ -22,7 +22,7 @@
           </div>
 
           <div class="input-prepend">
-            <input placeholder="请输入验证码"
+            <input placeholder="Enter security password"
                    type="text"
                    v-model="formData.code"
                    class="send-email-code code">
@@ -30,7 +30,7 @@
           </div>
 
           <div class="input-prepend">
-            <input placeholder="新密码"
+            <input placeholder="New password"
                    type="password"
                    class="password"
                    v-model="formData.new_password">
@@ -38,7 +38,7 @@
           </div>
 
           <div class="input-prepend">
-            <input placeholder="重复新密码"
+            <input placeholder="Confirm password"
                    type="password"
                    class="double_password"
                    v-model="formData.repeat_new_password">
@@ -48,14 +48,14 @@
           <button @click="resetSubmit"
                   class="sign-in-button"
                   type="button">
-            重置密码
+            RESET PASSWORD
           </button>
         </form>
         <!-- 更多登录方式 -->
         <div class="sign-footer">
           <a class="return-btn"
              href="javascript:;"
-             @click="tapSign">返回登录</a>
+             @click="tapSign">RETURN TO LOGIN</a>
         </div>
       </div>
     </div>

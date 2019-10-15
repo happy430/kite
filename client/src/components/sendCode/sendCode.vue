@@ -11,7 +11,7 @@
     name: 'sendcode',
     data() {
       return {
-        tmpStr: '获取验证码',
+        tmpStr: 'Get security code',
         timer: null,
         start: false,
         runSecond: this.second
@@ -27,11 +27,11 @@
       },
       runStr: {
         type: String,
-        default: '{%s}秒后重新获取'
+        default: 'Expires in {%s}seconds'
       },
       resetStr: {
         type: String,
-        default: '重新获取验证码'
+        default: 'Resend security code'
       },
       value: {
         type: Boolean,

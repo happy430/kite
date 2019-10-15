@@ -11,7 +11,7 @@
                        :style="{'background-image':'url('+website.meta.logo+')'}"></router-link>
           <router-link :to="{name:'home'}"
                        class="navbar-brand logo-text"
-                       v-else>{{website.meta.website_name}}</router-link>
+                       v-else></router-link>
           <div class="collapse navbar-collapse">
             <ul class="navbar-item-content mr-auto">
               <li class="navbar-menu-content active">
@@ -24,18 +24,26 @@
                     </div>
                     <el-dropdown-menu slot="dropdown">
                       <el-dropdown-item icon="el-icon-s-home"
-                                        :command="{name:'home'}">主页</el-dropdown-item>
+                                        :command="{name:'home'}">Home</el-dropdown-item>
+                      <el-dropdown-item icon="el-icon-s-home"
+                                        :command="{name:'home'}">Home</el-dropdown-item>
+                      <el-dropdown-item icon="el-icon-s-home"
+                                        :command="{name:'home'}">Home</el-dropdown-item>
+                      <el-dropdown-item icon="el-icon-s-home"
+                                        :command="{name:'home'}">Home</el-dropdown-item>
+                      <el-dropdown-item icon="el-icon-s-home"
+                                        :command="{name:'home'}">Home</el-dropdown-item>
                       <el-dropdown-item icon="el-icon-chat-line-round"
-                                        :command="{name:'dynamics',params:{dynamicTopicId:'newest'}}">片刻</el-dropdown-item>
+                                        :command="{name:'dynamics',params:{dynamicTopicId:'newest'}}">About</el-dropdown-item>
                       <el-dropdown-item icon="el-icon-tickets"
-                                        :command="{name:'articleBlogs'}">专栏</el-dropdown-item>
+                                        :command="{name:'articleBlogs'}">News</el-dropdown-item>
                       <el-dropdown-item icon="el-icon-chat-line-square"
                                         v-if="personalInfo.islogin"
-                                        :command="{name:'userMessage',params:{uid:personalInfo.user.uid}}">消息</el-dropdown-item>
+                                        :command="{name:'userMessage',params:{uid:personalInfo.user.uid}}">Contact</el-dropdown-item>
                     </el-dropdown-menu>
                   </el-dropdown>
                 </div>
-                <ul class="navbar-menu"
+<!--                <ul class="navbar-menu"
                     :class="{show:is_navbar_menu}">
                   <li class="nav-item">
                     <router-link :to="{name:'home'}"
@@ -57,7 +65,7 @@
                             class="unread-message-count">{{unread_message_count.count}}</span>
                     </router-link>
                   </li>
-                </ul>
+                </ul>-->
               </li>
               <li class="nav-item search">
                 <div class="form-search form-inline mr-lg-5">
@@ -66,7 +74,7 @@
                          required="true"
                          v-model="search_val"
                          name="search"
-                         placeholder="搜索文章"
+                         placeholder="Search"
                          aria-label="Search" />
                   <button class="search-btn"
                           @click="search">
@@ -91,12 +99,12 @@
                       </div>
                     </div>
                     <el-dropdown-menu slot="dropdown">
-                      <el-dropdown-item icon="el-icon-user"
-                                        :command="{name:'user',params:{uid:personalInfo.user.uid}}">我的主页</el-dropdown-item>
+<!--                      <el-dropdown-item icon="el-icon-user"
+                                        :command="{name:'user',params:{uid:personalInfo.user.uid}}">我的主页</el-dropdown-item>-->
                       <el-dropdown-item icon="el-icon-setting"
-                                        :command="{name:'setting'}">设置</el-dropdown-item>
+                                        :command="{name:'setting'}">Settings</el-dropdown-item>
                       <el-dropdown-item icon="el-icon-right"
-                                        :command="{name:'esc'}">退出</el-dropdown-item>
+                                        :command="{name:'esc'}">Logout</el-dropdown-item>
                     </el-dropdown-menu>
                   </el-dropdown>
                 </li>
@@ -106,13 +114,13 @@
                     @click="show_login"
                     v-if="website.config.on_login==='yes'">
                   <a class="btn btn-sm sign-btn btn-block"
-                     href="javascript:;">登录</a>
+                     href="javascript:;">Login</a>
                 </li>
                 <li class="nav-item"
                     @click="show_register"
                     v-if="website.config.on_register==='yes'">
                   <a class="btn s-btn--primary btn-sm sign-btn btn-outline-warning"
-                     href="javascript:;">注册</a>
+                     href="javascript:;">Register</a>
                 </li>
               </template>
             </ul>
@@ -186,13 +194,13 @@ export default {
 <style scoped lang="scss">
 .main-header {
   position: relative;
-  height: 63px;
+  height: 85px;
   .navbar-bootom-border {
     /* border: 1px solid transparent;
              border-color: #f0f0f0;*/
     z-index: 999;
     background: #fff;
-    border-bottom: 1px solid #f1f1f1;
+    /*border-bottom: 1px solid #f1f1f1;*/
     /*  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
               box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);*/
     /*  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -214,10 +222,10 @@ export default {
     color: #909090;
     z-index: 250;
     .navbar-view-re {
-      height: 60px;
+      height: 85px;
       position: relative;
       &:after {
-        border-bottom: 1px solid #f1f1f1;
+        /*border-bottom: 1px solid #f1f1f1;*/
         display: block;
         position: absolute;
         top: 59px;
@@ -234,6 +242,7 @@ export default {
       display: flex;
       align-items: center;
       height: 100%;
+      margin-left:20px;
       .navbar-brand {
         margin-right: 30px;
         &.logo-text {
@@ -243,8 +252,8 @@ export default {
         &.logo-img {
           background-size: 100% 100%;
           display: block;
-          width: 90px;
-          height: 32px;
+          width: 250px;
+          height: 50px;
           /* position: absolute;*/
           left: 10%;
         }
@@ -252,6 +261,9 @@ export default {
       .navbar-collapse {
         height: 100%;
         flex: 1 0 auto;
+        float: right;
+        position: absolute;
+        right: 5%;
         .navbar-item-content {
           display: flex;
           align-items: center;

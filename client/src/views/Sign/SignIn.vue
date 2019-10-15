@@ -2,14 +2,14 @@
   <section class="sign-lay layout-content">
     <div class="sign-view">
       <div class="title">
-        登录
+        Login
       </div>
       <div class="js-sign-in-container">
         <form id="new_session"
               ref="login">
           <!-- 正常登录登录名输入框 -->
           <div class="input-prepend restyle js-normal">
-            <input placeholder="邮箱"
+            <input placeholder="Email"
                    type="text"
                    v-model="formData.email"
                    @keyup.enter.native="login"
@@ -18,7 +18,11 @@
           </div>
 
           <div class="input-prepend">
-            <input placeholder="密码"
+            <div class="pull-right" style="position:absolute;top:5px;right:15px">
+              <a href="javascript:;" style="color: #3194d0;"
+                 @click="tapResetPassword">Forgot?</a>
+            </div>
+            <input placeholder="Password"
                    type="password"
                    v-model="formData.password"
                    name="password"
@@ -28,14 +32,8 @@
           </div>
 
           <div class="remember-btn clearfix">
-            <div class="pull-left">
-              没有账号？ <em class="reg-btn"
-                  @click="tapRegister">注册</em>
-            </div>
-            <div class="pull-right">
-              <a href="javascript:;"
-                 @click="tapResetPassword">忘记密码</a>
-            </div>
+
+
           </div>
 
           <div class="footer-text"></div>
@@ -44,8 +42,14 @@
                   id="sign-in-form-submit-btn"
                   type="button"
                   @click="login">
-            登录
+            Login
           </button>
+          <br/>
+          <div class="pull-left" style="font-size:12px">
+            NEW TO GRITGENE？ <em class="reg-btn"
+                                 @click="tapRegister">CREATE ACCOUNT</em>
+          </div>
+
         </form>
 
       </div>
